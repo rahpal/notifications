@@ -84,14 +84,14 @@
 					var notification_markup = null;
 
 			        if (!!params.delay) {
-			            notification_markup = '<div ng-hide="hideNotification" class="fadable notification ' + params.type + '">' +
-													'<p>' + params.message + '</p>' +
-													'<a href="javascript:void(0);" ng-click="close(false)" class="pull-right"><i class="remove glyphicon glyphicon-remove-sign glyphicon-white"></a>' +
+			            notification_markup = '<div ng-hide="hideNotification" class="row fadable notification ' + params.type + '">' +
+													'<p class="col-md-11">' + params.message + '</p>' +
+													'<a class="col-md-1" href="javascript:void(0);" ng-click="close(false)"><i class="pull-right remove glyphicon glyphicon-remove-sign glyphicon-white"></a>' +
 												'</div>';
 			        }else{
-			        	notification_markup = '<div ng-hide="hidePrmNotification" class="fadable permanant_notification ' + params.type + '">' +
-													'<p>' + params.message + '</p>' +
-													'<a href="javascript:void(0);" ng-click="close(true)" class="pull-right"><i class="remove glyphicon glyphicon-remove-sign glyphicon-white"></a>' +
+			        	notification_markup = '<div ng-hide="hidePrmNotification" class="row fadable permanant_notification ' + params.type + '">' +
+													'<p class="col-md-11">' + params.message + '</p>' +
+													'<a class="col-md-1" href="javascript:void(0);" ng-click="close(true)"><i class="pull-right remove glyphicon glyphicon-remove-sign glyphicon-white"></a>' +
 												'</div>';
 			        }
 
