@@ -1,0 +1,57 @@
+.notifications_container {
+    position: fixed;
+    top: 0;
+    width: 96%;
+    margin: 1em 2% 0 2%;
+    z-index: 100;
+	}
+
+    .notifications_container .notification, .notifications_container .permanant_notification {
+        border-radius: 2px;
+        padding: 1em 4em;
+        position: relative;
+        margin-bottom: 0.5em;
+        background: #FFDC7E url(../Images/alert-icon.png) no-repeat 1em 0.8em;
+        border: 1px solid #D6A522;
+        color: #6C5303;
+    }
+        .notifications_container .notification.success, .notifications_container .permanant_notification.success {
+            background: #B3FFB5 url(../Images/success-icon.png) no-repeat 1em 0.8em;
+            border: 1px solid #65E668;
+            color: #438A44;
+        }
+        .notifications_container .notification.error, .notifications_container .permanant_notification.error {
+            background: #F1A7A8 url(../Images/error-icon.png) no-repeat 1em 0.8em;
+            border: 1px solid #CA5454;
+            color: #B62425;
+        }
+        .notifications_container .notification p a, .notifications_container .permanant_notification p a {
+            text-decoration: none;
+            color: #2A6C9E;
+        }
+        .notifications_container .notification img.close, .notifications_container .permanant_notification img.close {
+            position: absolute;
+            right: 1em;
+            top: 1.2em;
+            cursor: pointer;
+        }
+
+.fadable {
+    transition: 0s linear all;
+}
+    .fadable.ng-hide-remove {
+        opacity: 0;
+        display: block !important;
+        transition: 0.2s linear all;
+    }
+    .fadable.ng-hide-remove.ng-hide-remove-active {
+        opacity: 0.5;
+    }
+    .fadable.ng-hide-add {
+        opacity: 0.5;
+        display: block !important;
+        transition: 0.5s linear all;
+    }
+    .fadable.ng-hide-add.ng-hide-add-active {
+        opacity: 0;
+    }
